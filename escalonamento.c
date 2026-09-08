@@ -23,7 +23,7 @@ FILE* abrirArquivo(const char *caminho){
     return arquivo;
 }
 
-int lerArquivo(FILE *arquivo, int *tempoTotal){
+int lerArquivo(FILE *arquivo, int *tempoTotal, tarefa tarefas[], int *qtdTarefas){
     if (fscanf(arquivo, "%d", tempoTotal) != 1){
         fprintf(stderr, "Não foi possível ler o tempo total.\n");
         return 0;
@@ -31,6 +31,53 @@ int lerArquivo(FILE *arquivo, int *tempoTotal){
 
     if (*tempoTotal <= 0){
         fprintf(stderr, "O tempo total deve ser maior que zero.\n");
+        return 0;
+    }
+
+
+    while (1){
+        tarefa atual;
+
+        int resultado = fscanf(arquivo, "%49s %d %d %d", atual.nome, &atual.periodo, &atual.deadline, &atual.burst);
+
+        if (resultado == EOF){
+            break;
+        }
+
+        if (resultado != 4){
+            fprintf(stderr, "Faltam infoemações da tarefa.\n");
+            return 0;
+        }
+
+        if (*qtdTarefas >= MaximoDeTarefas){
+            fprintf(stderr, "Quantidade de taredas inválida.\n");
+            return 0;
+        }
+
+        if (atual.periodo <= 0 || atual.deadline <= 0 || atual.burst <= 0){
+            fprintf(stderr, "Os valores da tarefa %s são inválidos\n", atual.nome);
+            return 0;
+        }
+
+        if (atual.deadline > atual.periodo){
+            fprintf(stderr, "O deadline da tareda %s é invalido\n", atual.nome);
+            return 0;
+        }
+
+        if (atual.burst > atual.deadline){
+            fprintf(stderr, "O burst da tarefa %s é invalido\n", atual.nome);
+            return 0;
+        }
+
+        atual.restante = 0;
+        atual.prazo = 0;
+
+        tarefas[*qtdTarefas] = atual;
+        (*qtdTarefas)++;
+        
+    }
+    if (*qtdTarefas == 0){
+        fprintf(stderr, "O arquivo nao tem tarefas.\n");
         return 0;
     }
 
@@ -56,8 +103,10 @@ int main(int argc, char *argv[]){
     }
 
     int tempoTotal;
+    int qtdTarefas = 0;
+    tarefa tarefas[MaximoDeTarefas];
 
-    if (lerArquivo(arquivo, &tempoTotal) == 0){
+    if (lerArquivo(arquivo, &tempoTotal, tarefas, &qtdTarefas) == 0){
         fclose(arquivo);
         return 1;
     }

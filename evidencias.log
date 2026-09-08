@@ -75,3 +75,95 @@ Script started on 2026-09-06 13:24:40-03:00 [TERM="xterm-256color" TTY="/dev/pts
 [?2004lexit
 
 Script done on 2026-09-06 13:28:35-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-08 15:14:15-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="126" LINES="23"]
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ date
+[?2004lTue Sep  8 15:14:17 -03 2026
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ whoami
+[?2004larthuralmeida
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ pwd
+[?2004l/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ make clean
+[?2004lrm -f scheduler
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ make
+[?2004lcc escalonamento.c -o scheduler
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ cat > teste1.txt << EOF
+[?2004l[?2004h> ATT 20 12 8
+[?2004l[?2004h> NAC[KV 50 30 12[K5
+[?2004l[?2004h> EOF
+[?2004l[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ ./scheduler rate testeq[K1.txt
+[?2004lNão foi possível ler o tempo total.
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ cat > teste2.txt << EOF
+[?2004l[?2004h> 100
+[?2004l[?2004h> ATT 20 12 8
+[?2004l[?2004h> NAV 50 30 15
+[?2004l[?2004h> EOF
+[?2004l[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ ./scheduler teste1.txt[K[K[K[K[K2.txt
+[?2004lUso: ./scheduler <rate|edf> <arquivo>
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ echo[K[K[K[K./scheduler rate teste2.txt
+[?2004lO arquivo nao tem tarefas.
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ echo $?
+[?2004l1
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ cat -m[Kn r[Kteste2.txt
+[?2004l     1	100
+     2	ATT 20 12 8
+     3	NAV 50 30 15
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ cat > teste3,[K.txt << EOF
+[?2004l[?2004h> 100
+[?2004l[?2004h> ATT 20[K5 15 5
+[?2004l[?2004h> M 40 20 10
+[?2004l[?2004h> EOF
+[?2004l[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ ./scheduler rate teste3.txt
+[?2004lO arquivo nao tem tarefas.
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ cat > teste4.txt << EOF
+[?2004l[?2004h> 100
+[?2004l[?2004h> ATT 40[K[K25 14[K5 5
+[?2004l[?2004h> M 3[K40 20 10
+[?2004l[?2004h> EOF
+[?2004l[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ ./scheduler teste4.txt
+[?2004lUso: ./scheduler <rate|edf> <arquivo>
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ ./scheduler rate teste4.txt
+[?2004lO arquivo nao tem tarefas.
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-08 15:34:14-03:00 [COMMAND_EXIT_CODE="1"]
+Script started on 2026-09-08 15:41:55-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="126" LINES="4"]
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ date[K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ date[K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ date[K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ date[K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ date[K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ date[K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ date
+[?2004lTue Sep  8 15:42:16 -03 2026
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ whoami
+[?2004larthuralmeida
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ pwd
+[?2004l/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ make clean
+[?2004lrm -f scheduler
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ make
+[?2004lcc escalonamento.c -o scheduler
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ cat > teste5.txt << EOF
+[?2004l[?2004h> 100
+[?2004l[?2004h> P 25 15 5
+[?2004l[?2004h> R
+[?2004l[?2004h> EOF
+[?2004l[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ cat > teste6.txt <<EOF EOF
+[?2004l[?2004h> 100
+[?2004l[?2004h> P 25 q[K15 5
+[?2004l[?2004h> R 40 20 10
+[?2004l[?2004h> EOF
+[?2004l[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ cat -n teste6.txt
+[?2004l     1	100
+     2	P 25 15 5
+     3	R 40 20 10
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ ./scheduler rate teste6.txt
+[?2004l[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ echo $?
+[?2004l0
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ cat > teste7.txt << EOF
+[?2004l[?2004h> 100
+[?2004l[?2004h> ATT 20 8 10
+[?2004l[?2004h> EOF
+[?2004l[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ ./schedulet[Kr teste7.txt[C teste7.txtr teste7.txta teste7.txtt teste7.txte teste7.txt[C teste7.txt[1Pteste7.txt
+[?2004lO burst da tarefa ATT é invalido
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ echo $?
+[?2004l1
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-08 15:47:33-03:00 [COMMAND_EXIT_CODE="0"]
