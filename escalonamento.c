@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MaximoDeTarefas 100
+#define MaximoDeTarefas 1000
 
 typedef struct {
     char nome[50];
@@ -48,22 +48,22 @@ int lerArquivo(FILE *arquivo, int *tempoTotal, tarefa tarefas[], int *qtdTarefas
         }
 
         if (resultado != 4){
-            fprintf(stderr, "Faltam infoemações da tarefa.\n");
+            fprintf(stderr, "Faltam informacoes da tarefa.\n");
             return 0;
         }
 
         if (*qtdTarefas >= MaximoDeTarefas){
-            fprintf(stderr, "Quantidade de taredas inválida.\n");
+            fprintf(stderr, "Quantidade de tarefas invalida.\n");
             return 0;
         }
 
         if (atual.periodo <= 0 || atual.deadline <= 0 || atual.burst <= 0){
-            fprintf(stderr, "Os valores da tarefa %s são inválidos\n", atual.nome);
+            fprintf(stderr, "Os valores da tarefa %s são invalidos\n", atual.nome);
             return 0;
         }
 
         if (atual.deadline > atual.periodo){
-            fprintf(stderr, "O deadline da tareda %s é invalido\n", atual.nome);
+            fprintf(stderr, "O deadline da tarefa %s é invalido\n", atual.nome);
             return 0;
         }
 
