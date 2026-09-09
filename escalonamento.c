@@ -260,7 +260,7 @@ int main(int argc, char *argv[]){
     }
 
     if (strcmp(argv[1], "rate") != 0 && strcmp(argv[1], "edf") != 0){
-        fprintf(stderr, "Algoritmo inválido.\n");
+        fprintf(stderr, "Algoritmo invalido.\n");
         return 1;
     }
 
