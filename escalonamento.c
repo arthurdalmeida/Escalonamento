@@ -117,6 +117,55 @@ int escolherEdf(tarefa tarefas[], int qtdTarefas){
     return escolhida;
 }
 
+void executarEscalonamento(tarefa tarefas[], int qtdTarefas, int tempoTotal, const char *escalonador){
+    for (int tempo=0; tempo < tempoTotal; tempo++){
+        for (int i=0; i<qtdTarefas; i++){
+            if (tarefas[i].restante > 0 && tarefas[i].prazo == tempo){
+                tarefas[i].perdidas++;
+                tarefas[i].restante = 0;
+            }
+        }
+
+        for (int i=0; i< qtdTarefas; i++){
+            if (tempo % tarefas[i].periodo == 0){
+                tarefas[i].restante = tarefas[i].burst;
+                tarefas[i].prazo = tarefas[i].deadline + tempo;
+            }
+        }
+
+        int escolhida;
+
+        if (strcmp(escalonador, "rate") == 0){
+            escolhida = escolherRate(tarefas, qtdTarefas);
+        }
+
+        else{
+            escolhida = escolherEdf(tarefas, qtdTarefas);
+        }
+
+        if (escolhida != -1){
+            tarefas[escolhida].restante--;
+
+            if (tarefas[escolhida].restante == 0){
+                tarefas[escolhida].completas++;
+            }
+        }
+    }
+
+    for (int i=0; i<qtdTarefas; i++){
+        if (tarefas[i].restante > 0){
+            if (tarefas[i].prazo <= tempoTotal){
+                tarefas[i].perdidas++;
+            }
+
+            else{
+                tarefas[i].mortas++;
+            }
+            tarefas[i].restante = 0;
+        }
+    }
+}
+
 
 int main(int argc, char *argv[]){
     if (argc != 3){
@@ -145,6 +194,8 @@ int main(int argc, char *argv[]){
     }
 
     fclose(arquivo);
+
+    executarEscalonamento(tarefas, qtdTarefas, tempoTotal, argv[1]);
 
     return 0;
 }
