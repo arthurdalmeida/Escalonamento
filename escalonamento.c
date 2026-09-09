@@ -20,7 +20,7 @@ FILE* abrirArquivo(const char *caminho){
     FILE *arquivo = fopen(caminho, "r");
 
     if (arquivo == NULL){
-        fprintf(stderr, "Não foi possível abrir o arquivo: %s\n", caminho);
+        fprintf(stderr, "Nao foi possivel abrir o arquivo: %s\n", caminho);
     }
 
     return arquivo;
@@ -28,7 +28,7 @@ FILE* abrirArquivo(const char *caminho){
 
 int lerArquivo(FILE *arquivo, int *tempoTotal, tarefa tarefas[], int *qtdTarefas){
     if (fscanf(arquivo, "%d", tempoTotal) != 1){
-        fprintf(stderr, "Não foi possível ler o tempo total.\n");
+        fprintf(stderr, "Nao foi possivel ler o tempo total.\n");
         return 0;
     }
 
@@ -58,7 +58,7 @@ int lerArquivo(FILE *arquivo, int *tempoTotal, tarefa tarefas[], int *qtdTarefas
         }
 
         if (atual.periodo <= 0 || atual.deadline <= 0 || atual.burst <= 0){
-            fprintf(stderr, "Os valores da tarefa %s são invalidos\n", atual.nome);
+            fprintf(stderr, "Os valores da tarefa %s sao invalidos\n", atual.nome);
             return 0;
         }
 
@@ -286,7 +286,7 @@ int main(int argc, char *argv[]){
     char *motivo = calloc(tempoTotal, sizeof(char));
 
     if (historico == NULL || motivo == NULL){
-        fprintf(stderr, "Não foi possível reservar memória.\n");
+        fprintf(stderr, "Nao foi possivel reservar memoria.\n");
         free(historico);
         free(motivo);
         return 1;
