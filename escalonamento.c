@@ -11,6 +11,9 @@ typedef struct {
     int burst;
     int restante;
     int prazo;
+    int completas;
+    int perdidas;
+    int mortas;
 } tarefa;
 
 FILE* abrirArquivo(const char *caminho){
@@ -72,6 +75,10 @@ int lerArquivo(FILE *arquivo, int *tempoTotal, tarefa tarefas[], int *qtdTarefas
         atual.restante = 0;
         atual.prazo = 0;
 
+        atual.completas = 0;
+        atual.perdidas = 0;
+        atual.mortas = 0;
+
         tarefas[*qtdTarefas] = atual;
         (*qtdTarefas)++;
         
@@ -82,6 +89,32 @@ int lerArquivo(FILE *arquivo, int *tempoTotal, tarefa tarefas[], int *qtdTarefas
     }
 
     return 1;
+}
+
+int escolherRate(tarefa tarefas[], int qtdTarefas){
+    int escolhida = -1;
+
+    for (int i=0; i<qtdTarefas; i++){
+        if (tarefas[i].restante > 0){
+            if (escolhida == -1 || tarefas[i].periodo < tarefas[escolhida].periodo){
+                escolhida = i;
+            }
+        }
+    }
+    return escolhida;
+}
+
+int escolherEdf(tarefa tarefas[], int qtdTarefas){
+    int escolhida = -1;
+
+    for (int i=0; i<qtdTarefas; i++){
+        if (tarefas[i].restante > 0){
+            if (escolhida == -1 || tarefas[i].prazo < tarefas[escolhida].prazo){
+                escolhida = i;
+            }
+        }
+    }
+    return escolhida;
 }
 
 

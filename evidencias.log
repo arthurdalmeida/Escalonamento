@@ -167,3 +167,83 @@ Script started on 2026-09-08 15:41:55-03:00 [TERM="xterm-256color" TTY="/dev/pts
 [?2004lexit
 
 Script done on 2026-09-08 15:47:33-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-08 16:51:45-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="93" LINES="8"]
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ date
+[?2004lTue Sep  8 16:51:49 -03 2026
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ whoami
+[?2004larthuralmeida
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ pwd
+[?2004l/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ make clea n
+[?2004lrm -f scheduler
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ make
+[?2004lcc escalonamento.c -o scheduler
+[01m[Kescalonamento.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kescalonamento.c:160:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kescolha[m[K’ undeclared (first use in this function); did you mean ‘[01m[Kescolhida[m[K’?
+  160 |     if ([01;31m[Kescolha[m[K == -1){
+      |         [01;31m[K^~~~~~~[m[K
+      |         [32m[Kescolhida[m[K
+[01m[Kescalonamento.c:160:9:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+make: *** [Makefile:2: scheduler] Error 1
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ make clea n
+[?2004lrm -f scheduler
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ make
+[?2004lcc escalonamento.c -o scheduler
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ cat > tes te.txt[Kt << EOF
+[?2004l[?2004h> 100
+[?2004l[?2004h> RAPIDA 20 20 5
+[?2004l[?2004h> URGENTE 50 10 5
+[?2004l[?2004h> EOF
+[?2004l[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ ./schedul er rate teste.txt
+[?2004ltarefa escolhida: RAPIDA
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ echo $?
+[?2004l0
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ ./schedul er edf teste.txt
+[?2004ltarefa escolhida: RAPIDA
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ echo $?
+[?2004l0
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-08 17:01:08-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-08 18:24:38-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="87" LINES="8"]
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ dat e
+[?2004lTue Sep  8 18:24:42 -03 2026
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ who ami
+[?2004larthuralmeida
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ pwd [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kd
+[?2004l/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ mak e clean
+[?2004lrm -f scheduler
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ mak e
+[?2004lcc escalonamento.c -o scheduler
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [K[A[K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ cat  [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct  > text[K[Kzte.txt << EOF[1P[1@s
+[?2004l[?2004h> 100
+[?2004l[?2004h> RAPIDA 100 [K[K[K[K20 20 5
+[?2004l[?2004h> URGENTE 50 10 5
+[?2004l[?2004h> EOF
+[?2004l[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ ./s hce[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs cheduler rate teste,[K.txt
+[?2004ltarefa escolhida: RAPIDA
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ ./s cheduler edf teste.txt
+[?2004ltarefa escolhida: URGENTE
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ cat  cat > empate.txt << EOF
+[?2004l[?2004h> 100
+[?2004l[?2004h> P 20 10 5
+[?2004l[?2004h> S 20 10 5
+[?2004l[?2004h> EOF
+[?2004lcat: cat: No such file or directory
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ [7mcat[27m[7m [27m[7m> empate.txt << EOF[27m[A]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ cat > empate.txt << EOF
+[?2004l[?2004h> 100
+[?2004l[?2004h> P 20 10 5
+[?2004l[?2004h> S 20 10 5
+[?2004l[?2004h> EOF
+[?2004l[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ ./s cheduler empate[K[K[K[K[K[Krate empate.txt
+[?2004ltarefa escolhida: P
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ ./s cheduler edf empate.txt
+[?2004ltarefa escolhida: P
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Escalonamento de CPU/Escalonamento[00m$ exi t
+[?2004lexit
+
+Script done on 2026-09-08 18:34:36-03:00 [COMMAND_EXIT_CODE="0"]
