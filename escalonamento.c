@@ -117,11 +117,18 @@ int escolherEdf(tarefa tarefas[], int qtdTarefas){
     return escolhida;
 }
 
-void executarEscalonamento(tarefa tarefas[], int qtdTarefas, int tempoTotal, const char *escalonador){
+void executarEscalonamento(tarefa tarefas[], int qtdTarefas, int tempoTotal, const char *escalonador, int historico[], char motivo[]){
     for (int tempo=0; tempo < tempoTotal; tempo++){
+        historico[tempo] = -1;
+        motivo[tempo] = '\0';
+
         for (int i=0; i<qtdTarefas; i++){
             if (tarefas[i].restante > 0 && tarefas[i].prazo == tempo){
                 tarefas[i].perdidas++;
+
+                if (tempo > 0 && historico[tempo-1] == i){
+                    motivo[tempo-1] = 'L';
+                }
                 tarefas[i].restante = 0;
             }
         }
@@ -143,11 +150,14 @@ void executarEscalonamento(tarefa tarefas[], int qtdTarefas, int tempoTotal, con
             escolhida = escolherEdf(tarefas, qtdTarefas);
         }
 
+        historico[tempo] = escolhida;
+
         if (escolhida != -1){
             tarefas[escolhida].restante--;
 
             if (tarefas[escolhida].restante == 0){
                 tarefas[escolhida].completas++;
+                motivo[tempo] = 'F';
             }
         }
     }
@@ -156,6 +166,10 @@ void executarEscalonamento(tarefa tarefas[], int qtdTarefas, int tempoTotal, con
         if (tarefas[i].restante > 0){
             if (tarefas[i].prazo <= tempoTotal){
                 tarefas[i].perdidas++;
+
+                if (tempoTotal > 0 && historico[tempoTotal-1] == i){
+                    motivo[tempoTotal-1] = 'L';
+                }
             }
 
             else{
@@ -166,6 +180,78 @@ void executarEscalonamento(tarefa tarefas[], int qtdTarefas, int tempoTotal, con
     }
 }
 
+FILE *criarArquivoSaida(char *escalonador){
+    char nomeArquivo[100];
+
+    snprintf(nomeArquivo, sizeof(nomeArquivo), "%s_aao.out", escalonador);
+
+    FILE *saida = fopen(nomeArquivo, "w");
+
+    if (saida == NULL){
+        fprintf(stderr, "Nao foi possivel criar o arquivo de saida\n");
+    }
+
+    return saida;
+}
+
+void escreverSaida(FILE* saida, char *escalonador, tarefa tarefas[], int qtdTarefas, int historico[], char motivo[], int tempoTotal){
+    if (strcmp(escalonador, "rate") == 0){
+        fprintf(saida, "EXECUTION BY RATE\n");
+    }
+
+    else{
+        fprintf(saida, "EXECUTION BY EDF\n");
+    }
+
+    int inicio = 0;
+
+    while (inicio <tempoTotal){
+        int executada = historico[inicio];
+        int fim = inicio;
+
+        if (executada == -1){
+            while (fim + 1 < tempoTotal && historico[fim +1] == -1){
+                fim++;
+            }
+
+            fprintf(saida, "idle for %d units\n", fim - inicio + 1);
+        }
+
+        else{
+            while(fim + 1 <tempoTotal && historico[fim + 1] == executada && motivo[fim] == '\0'){
+                fim++;
+            }
+
+            char estado = motivo[fim];
+
+            if (estado == '\0'){
+                estado = 'H';
+            }
+
+            fprintf(saida, "[%s] for %d units - %c\n", tarefas[executada].nome, fim - inicio + 1, estado);
+        }
+
+        inicio = fim + 1;
+    }
+
+    fprintf(saida, "LOST DEADLINES\n");
+
+    for (int i=0; i< qtdTarefas; i++){
+        fprintf(saida, "[%s] %d\n", tarefas[i].nome, tarefas[i].perdidas);
+    }
+
+    fprintf(saida, "COMPLETE EXECUTION\n");
+
+    for (int i=0; i< qtdTarefas; i++){
+        fprintf(saida, "[%s] %d\n", tarefas[i].nome, tarefas[i].completas);
+    }
+
+    fprintf(saida, "KILLED\n");
+
+    for (int i=0; i< qtdTarefas; i++){
+        fprintf(saida, "[%s] %d\n", tarefas[i].nome, tarefas[i].mortas);
+    }
+}
 
 int main(int argc, char *argv[]){
     if (argc != 3){
@@ -194,8 +280,34 @@ int main(int argc, char *argv[]){
     }
 
     fclose(arquivo);
+    
+    int *historico = malloc(tempoTotal * sizeof(int));
 
-    executarEscalonamento(tarefas, qtdTarefas, tempoTotal, argv[1]);
+    char *motivo = calloc(tempoTotal, sizeof(char));
+
+    if (historico == NULL || motivo == NULL){
+        fprintf(stderr, "Não foi possível reservar memória.\n");
+        free(historico);
+        free(motivo);
+        return 1;
+    }
+
+    executarEscalonamento(tarefas, qtdTarefas, tempoTotal, argv[1], historico, motivo);
+
+    FILE* saida = criarArquivoSaida(argv[1]);
+
+    if (saida == NULL){
+        free(historico);
+        free(motivo);
+        return 1;
+    }
+
+    escreverSaida(saida, argv[1], tarefas, qtdTarefas, historico, motivo, tempoTotal);
+
+    fclose(saida);
+
+    free(historico);
+    free(motivo);
 
     return 0;
 }
