@@ -1113,3 +1113,63 @@ KILLED
 [?2004lexit
 
 Script done on 2026-09-09 15:51:51-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-09 23:40:32-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="87" LINES="15"]
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ whoam[K[K[K[K[Kdate
+[?2004lWed Sep  9 23:40:36 -03 2026
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ whoami
+[?2004larthuralmeida
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ pwd
+[?2004l/mnt/c/Users/almei/Simular/Escalonamento
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ make clean
+[?2004lrm -f scheduler
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ make
+[?2004lcc -Wall -Wextra escalonamento.c -o scheduler
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ [7m./scheduler rate comparacao.txt[27m[C[C[C[C[C[C[C[C[C[C[C./scheduler rate comparacao.txt
+[?2004l[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ cat rate_aao.out
+[?2004lEXECUTION BY RATE
+[T1] for 1 units - F
+idle for 2 units
+[T1] for 1 units - F
+[T2] for 1 units - F
+idle for 1 units
+[T1] for 1 units - F
+idle for 1 units
+[T2] for 1 units - F
+[T1] for 1 units - F
+idle for 2 units
+LOST DEADLINES
+[T1] 0
+[T2] 1
+COMPLETE EXECUTION
+[T1] 4
+[T2] 2
+KILLED
+[T1] 0
+[T2] 0
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ [K[A[K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ [K]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ [7m./scheduler edf [27m[7mc[27m[7momparacao.txt[27m[A]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ [5P./scheduler edf comparacao.txt
+[?2004l[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ cat edf_aao.out
+[?2004lEXECUTION BY EDF
+[T2] for 1 units - F
+[T1] for 1 units - F
+idle for 1 units
+[T1] for 1 units - F
+[T2] for 1 units - F
+idle for 1 units
+[T1] for 1 units - F
+idle for 1 units
+[T2] for 1 units - F
+[T1] for 1 units - F
+idle for 2 units
+LOST DEADLINES
+[T1] 0
+[T2] 0
+COMPLETE EXECUTION
+[T1] 4
+[T2] 3
+KILLED
+[T1] 0
+[T2] 0
+[?2004h]0;arthuralmeida@tucano-maquina: /mnt/c/Users/almei/Simular/Escalonamento[01;32marthuralmeida@tucano-maquina[00m:[01;34m/mnt/c/Users/almei/Simular/Escalonamento[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-09 23:42:41-03:00 [COMMAND_EXIT_CODE="0"]
